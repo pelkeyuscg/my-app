@@ -1,0 +1,21 @@
+<h1>New director</h1>
+
+<% @director.errors.full_messages.each do |message| %>
+  <p style="color: red;".<%= message %>> </p>
+<% end %>
+<hr>
+
+<%= form_with(model: @director) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :dob %>
+    <%= form.text_field :dob %>
+  </div>    
+
+  <%= form.button %>
+
+<% end %>

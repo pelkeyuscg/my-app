@@ -1,0 +1,27 @@
+<h1>Edit director</h1>
+
+<% @director.errors.full_messages.each do |message| %>
+  <p style="color: red;"><%= message %></p>
+<% end %>
+
+<%= form_with(url:director_path(@director), method: :patch) do %>
+
+  <div>
+    <%= label_tag :title %>
+    
+    <%= label_field_tag :query_title, @director.title, id: "title" %>
+
+  </div>
+
+  <div>
+    
+    <%= label_tag :description %>
+    
+    <%= label_area_tag :query_description, @director.description, id: "Description", rows: 3 %>
+
+  </div>
+
+  <button>
+    Update director
+  </button>
+</form>

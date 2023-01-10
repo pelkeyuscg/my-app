@@ -1,0 +1,51 @@
+<div>
+  <div>
+    <h1>
+      Movie #<%= @director.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <%= link_to "Go back", director_path %>
+      </div>
+
+      <div>
+        <%= link_to "Edit director", edit_directors_path(:id) %>
+      </div>
+
+      <div>
+        <%= link_to "Delete director", delete_directors_path(:id) %>      
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Title
+      </dt>
+      <dd>
+        <%= @director.title %>
+      </dd>
+
+      <dt>
+        Description
+      </dt>
+      <dd>
+        <%= @director.description %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@director.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@director.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
