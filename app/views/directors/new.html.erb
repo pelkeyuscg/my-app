@@ -1,7 +1,7 @@
 <h1>New director</h1>
 
 <% @director.errors.full_messages.each do |message| %>
-  <p style="color: red;".<%= message %>> </p>
+  <p style="color: red;"><%= message %> </p>
 <% end %>
 <hr>
 
@@ -17,5 +17,8 @@
   </div>    
 
   <%= form.button %>
+   <div>
+      <%= link_to "Go back", director_path %>
+    </div>
 
 <% end %>
