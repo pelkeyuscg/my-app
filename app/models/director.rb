@@ -3,11 +3,12 @@
 # Table name: directors
 #
 #  id         :integer          not null, primary key
-#  dob        :date
 #  name       :string
+#  dob        :date
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 class Director < ApplicationRecord
-  validates :title, presence: true
+  validates :name, presence: true
+  validates :dob, presence: true
 end

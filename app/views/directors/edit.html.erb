@@ -7,17 +7,17 @@
 <%= form_with(url:director_path(@director), method: :patch) do %>
 
   <div>
-    <%= label_tag :title %>
+    <%= label_tag :name %>
     
-    <%= label_field_tag :query_title, @director.title, id: "title" %>
+    <%= label_field_tag :query_name, @director.name, id: "Name" %>
 
   </div>
 
   <div>
     
-    <%= label_tag :description %>
+    <%= label_tag :dob %>
     
-    <%= label_area_tag :query_description, @director.description, id: "Description", rows: 3 %>
+    <%= label_area_tag :query_dob, @director.dob, id: "Dob" %>
 
   </div>
 
